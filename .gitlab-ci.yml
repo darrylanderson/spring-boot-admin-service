@@ -1,7 +1,13 @@
 image: java:8
 
 stages:
+  - approval
   - build
+
+approval:
+  stage: approval
+  script: echo 'Approval required'
+  when: manual
 
 build:
   stage: build
